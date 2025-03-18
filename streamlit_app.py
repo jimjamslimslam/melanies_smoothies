@@ -21,9 +21,6 @@ pd_df=my_dataframe.to_pandas()
 
 ingredients_list = st.multiselect('Choose up to 5 ingredients:', my_dataframe, max_selections = 5)
 
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/all")
-sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
-
 if ingredients_list:
 
     ingredients_string = ''
